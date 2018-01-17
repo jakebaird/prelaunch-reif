@@ -3547,3 +3547,13 @@ Completed 302 Found in 52ms (ActiveRecord: 42.2ms)
 Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (71.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jake.baird@bcanational.com"]]
+Redirected to http://localhost:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 96ms (ActiveRecord: 71.5ms)
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jake.baird@bcanational.com"]]
+  [1m[35m (6.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 156ms (Views: 140.1ms | ActiveRecord: 6.8ms)

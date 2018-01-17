@@ -1,6 +1,6 @@
 <div class="header">
   <div class="content">
-    <p class="logo brandon">Harry&#8217;s</p>
+    <p class="logo brandon">REIF</p>
     <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
   </div>
 </div>
@@ -15,7 +15,7 @@
       <p class="title brandon">INVITE FRIENDS &<br>get free stuff</p>
       <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn goods & vouchers for<br>each friend who signs up.</p>
       <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-      <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+      <% twitter_message = "#buying property is evolving. Excited for this to launch!" %>
       <div class="social-links">
         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
         <div class="sep"></div>
@@ -45,7 +45,7 @@
   <div class="page-content">
     <p class="callout brandon">Here's How It Works:</p>
     <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
+      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Rewards Earned</p></li>
       <% stops.each do |stop| %>
         <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
           <div class="circle"><%= stop["count"] %></div>
