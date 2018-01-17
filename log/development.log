@@ -3313,3 +3313,237 @@ Processing by UsersController#refer as HTML
   [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 1]]
   Rendered users/refer.html.erb within layouts/application (3.6ms)
 Completed 200 OK in 800ms (Views: 797.2ms | ActiveRecord: 0.9ms)
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (23.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jake.baird@bcanational.com"]]
+Redirected to http://localhost:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 40ms (ActiveRecord: 23.9ms)
+Processing by UsersController#refer as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jake.baird@bcanational.com"]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 97ms (Views: 87.6ms | ActiveRecord: 2.0ms)
+Processing by UsersController#refer as HTML
+  [1m[35mUser Load (36.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jake.baird@bcanational.com"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 141ms (Views: 77.8ms | ActiveRecord: 36.4ms)
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jake.baird@bcanational.com"]]
+Redirected to http://localhost:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 92ms (ActiveRecord: 79.7ms)
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jake.baird@bcanational.com"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.7ms)
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jake.baird@bcanational.com"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.8ms)
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jake.baird@bcanational.com"]]
+Redirected to http://localhost:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Processing by UsersController#refer as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jake.baird@bcanational.com"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.6ms)
+Processing by UsersController#refer as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jake.baird@bcanational.com"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 1]]
+  Rendered users/refer.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.7ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fl3Rmoe0XavFwWako8lGTzHNcDLTA3vHpT+OSRNAo1dhAXvCpOicgAXZzh39wMub1X/1Q+izRfGXIHI2cF7diQ==", "user"=>{"email"=>"jake.baird@bcanational.com"}}
+  [1m[35m (18.2ms)[0m  BEGIN
+  [1m[36mUser Exists (28.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake.baird@bcanational.com' LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake.baird@bcanational.com
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 47.8ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1j7opp/p6KrJeI+cmzsxuzUBHlPgoz30ntFepK5y4gfJYkL+vLUpgQlgJyXFMrxv0bObItsTA8KszqLbzWyc2Q==", "user"=>{"email"=>"jake@launcherr.com"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake@launcherr.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake@launcherr.com
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+Processing by Admin::AdminUsersController#index as HTML
+Completed 401 Unauthorized in 99ms (ActiveRecord: 0.0ms)
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/shared/_links.erb (12.1ms)
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (343.1ms)
+Completed 200 OK in 711ms (Views: 592.6ms | ActiveRecord: 43.8ms)
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YfK66JhMXxtkg0BhOLlFXEBJ2R2ErQnsS83xcqGZdyhRUIj4MB2H5jYLnrkMp9tjqNj1KtKrzoo+wr1kOKB2uA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (22.3ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1  ORDER BY "admin_users"."id" ASC LIMIT 1  [["email", "admin@example.com"]]
+Completed 401 Unauthorized in 56ms (ActiveRecord: 22.3ms)
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YfK66JhMXxtkg0BhOLlFXEBJ2R2ErQnsS83xcqGZdyhRUIj4MB2H5jYLnrkMp9tjqNj1KtKrzoo+wr1kOKB2uA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/shared/_links.erb (4.2ms)
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (21.9ms)
+Completed 200 OK in 242ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w9wAWScnCjeeTQy6jLjR6Y1z0ZrsE0SSUzrsncHorxXzfjJJj3bSyszF0mK4pk/WZeL9rboVg/QmNaCLWNGuhQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["email", "admin@example.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.6ms)
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w9wAWScnCjeeTQy6jLjR6Y1z0ZrsE0SSUzrsncHorxXzfjJJj3bSyszF0mK4pk/WZeL9rboVg/QmNaCLWNGuhQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/shared/_links.erb (3.4ms)
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (20.5ms)
+Completed 200 OK in 200ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JiBZTJyEvDAD6ApNNk+aHRgDVo4e5W2RsH18sJkW6wQWgmtcNNVkzVFg1JUCUQQi8JJ6uUjjqvfFcjCmAC/qlA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1  ORDER BY "admin_users"."id" ASC LIMIT 1  [["email", "admin@example.com"]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.6ms)
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JiBZTJyEvDAD6ApNNk+aHRgDVo4e5W2RsH18sJkW6wQWgmtcNNVkzVFg1JUCUQQi8JJ6uUjjqvfFcjCmAC/qlA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/shared/_links.erb (3.1ms)
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (19.8ms)
+Completed 200 OK in 203ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O89BF+BOAgd3yoSJl82d8UMPnUfl7WaO7Xj/Qi/EYXALbXMHSB/a+iVCWlGj0wPOq56xcLProeiYd7NUtv1g4A==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["email", "admin@example.com"]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.5ms)
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O89BF+BOAgd3yoSJl82d8UMPnUfl7WaO7Xj/Qi/EYXALbXMHSB/a+iVCWlGj0wPOq56xcLProeiYd7NUtv1g4A==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/shared/_links.erb (3.6ms)
+  Rendered /Users/lnchr/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (19.4ms)
+Completed 200 OK in 224ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GXKsW1pIw9+y+q2p45ctGgDgF3ZqiIgQBKY9fmthGCkGLgYDeRQC9HLiBRC9nqDO5FKSB1E4tiY2ucEBCH9m9w==", "user"=>{"email"=>"jake.baird@bcanational.com"}}
+  [1m[35m (16.7ms)[0m  BEGIN
+  [1m[36mUser Exists (2.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake.baird@bcanational.com' LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake.baird@bcanational.com
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 20.2ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WkOxmtZyMwRNp6AkbYLI45rjCCPyZCWPLbDulUl64RJFHxvC9S7yL42/CJ0zi0U3flGNUsnUG7kfrxLqKmSfzA==", "user"=>{"email"=>""}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Error saving user with email, 
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aj6W+6qBP+wlX/J3jUJYJ4szWCwdkjOABcZ4qNv0vlZ1Yjyjid3+x+VHWs7TS9Xzb4HdXSYiDbY32YTXuOrAiA==", "user"=>{"email"=>""}}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, 
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9LZuqbUs6uPABSU51TygcKFzEk5HGxJ6PN6BdgmEy1br6sTxlnAryAAdjYCLNS2kRcGXP3yrLEwOwX0Japq1iA==", "user"=>{"email"=>""}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, 
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A1xbJ4aNET1G2B/KhaNYeOkQ9F7CUb5zKGv3SqWTISEcAPF/pdHQFobAt3PbqtWsDaJxL/nhgEUadAs1xo1f/w==", "user"=>{"email"=>"jake.baird@bcanational.com"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake.baird@bcanational.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake.baird@bcanational.com
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LVs0F4QW3X8TYp6abht1ExkAoIyYlPv9s1m8iczSZ8IyB55Pp0ocVNN6NiMwEvjH/bIl/aMkxcuBRkD2r8wZHA==", "user"=>{"email"=>"hi"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'hi' LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, hi
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y2rs+3RmtBpeQGpUOHXu5lg8akGPYH2QptWbFOiF2t3UNkajVzp1MZ5Ywu1mfGMyvI7vMLTQQ6aUymdri5ukAw==", "user"=>{"email"=>"jake.baird@bcanational.com"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake.baird@bcanational.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake.baird@bcanational.com
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 52ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ekNnMNYI3W0WqpZzEixRPdXDFG7VVPK+2vYGpXh5DRZlH81o9VQcRtayPspMJdzpMXGRH+7kzIjo6fraG2dzyA==", "user"=>{"email"=>"jake@cta.com.au"}}
+  [1m[35m (9.1ms)[0m  BEGIN
+  [1m[36mUser Exists (2.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake@cta.com.au' LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake@cta.com.au
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 13.1ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aP7Yf+pvnizGyg1CCejiWc0UZ/dCg2/OIX5OUShIDLd3onInyTNfBwbSpftX4W+NKabihnkzUfgTYbIuS1ZyaQ==", "user"=>{"email"=>"jake@cta.com.au"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (41.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake@cta.com.au' LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Error saving user with email, jake@cta.com.au
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 42.2ms)
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
